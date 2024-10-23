@@ -15,8 +15,8 @@ export const usePlanets = () =>{
                 setCargando(true)
 
                 try {
-                    const response = await getPlanet()
-                    setDato(response.data.items)
+                    const dato = await getPlanet()
+                    setDato(dato)
                     setCargando(false)
                 } catch (error) {
                     setCargando(false)
