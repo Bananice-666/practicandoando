@@ -11,10 +11,10 @@
     justify-content: space-between;
     list-style-type: none;
 }
-a:hover{
+.link:hover{
     color: #af6464 ;
 }
 
-a{
+.link{
     color: black;
 }
