@@ -9,25 +9,22 @@ export const usePlanets = () =>{
     const [ cargando, setCargando ] = useState(false)
     const [ error, setError ] = useState(null)
 
-    useEffect(
-        ()=>{
-            const fetchPlanets= async ()=>{
-                setCargando(true)
-
-                try {
-                    const dato = await getPlanet()
-                    setDato(dato)
-                    setCargando(false)
-                } catch (error) {
-                    setCargando(false)
-                    setError(error)
-                }
+    useEffect(() => {
+        const fetchDetailId = async () => {
+            setLoading(true);
+            try {
+                const data = await setDetailsId(id); // Pasa el ID a la función
+                setData(data);
+            } catch (error) {
+                setError(error);
+            } finally {
+                setLoading(false);
             }
-
-            fetchPlanets()
-
-        },[]
-    )
+        };
+        if (id) {
+            fetchDetailId(); // Solo hacer la petición si hay un ID
+        }
+    }, [id]);
 
     return{dato,cargando,error}
 }

@@ -4,6 +4,7 @@ import "./cardCharacter.css"
 export const CardCharacters = ({ nombre, image, id, description }) => {
 
     return (
+
         <div className="container-character">
             <div className="character">
                 <div className="character-container-img">
