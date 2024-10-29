@@ -4,27 +4,27 @@ import { getPlanet } from "../service/planets"
 
 
 
+
 export const usePlanets = () =>{
     const [ dato, setDato ] = useState(null)
     const [ cargando, setCargando ] = useState(false)
     const [ error, setError ] = useState(null)
 
     useEffect(() => {
-        const fetchDetailId = async () => {
-            setLoading(true);
+        const fechtPlanets = async () => {
+            setCargando(true);
             try {
-                const data = await setDetailsId(id); // Pasa el ID a la función
-                setData(data);
+                const data = await getPlanet()
+                setDato(data);
+                setCargando(false)
+
             } catch (error) {
                 setError(error);
-            } finally {
-                setLoading(false);
+                setCargando(false)
             }
         };
-        if (id) {
-            fetchDetailId(); // Solo hacer la petición si hay un ID
-        }
-    }, [id]);
+        fechtPlanets()
+    }, []);
 
-    return{dato,cargando,error}
+    return{dato, cargando,error}
 }
