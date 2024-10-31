@@ -1,7 +1,7 @@
 import { CardCharacters } from "../../components/custom/cardCharacters"
 import { useCharacter } from "../../hooks/useCharacter"
 
-export const Characters=()=>{
+export const CharactersPage=()=>{
 
     const { data, error, loading} = useCharacter()
 

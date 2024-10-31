@@ -5,7 +5,7 @@ export const CardCharacters = ({ nombre, image, id, description }) => {
 
     return (
 
-        <div className="container-character">
+        <div className="container-character" key={id}>
             <div className="character">
                 <div className="character-container-img">
                     <img src={image} alt={nombre} className="character-img" />

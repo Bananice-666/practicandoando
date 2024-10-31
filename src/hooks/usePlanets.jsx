@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import { getPlanet } from "../service/planets"
+import { getPlanet } from "../service/apiService"
 
 
 

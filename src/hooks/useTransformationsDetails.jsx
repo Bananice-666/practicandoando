@@ -1,31 +1,31 @@
-import { useEffect } from "react"
 import { useState } from "react"
-import { getTransformation } from "../service/apiService"
+import { getTransformationDetails } from "../service/apiService"
+import { useEffect } from "react"
 
 
-
-export const useTransformation = () =>{
+export const useTransformationDetails = (id) =>{
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(false)
-    const [error, setError ]= useState(null)
+    const [error, setError]= useState(null)
 
     useEffect(
         ()=>{
-            const fetchTransformation=async()=>{
+            const fetchTransformationDetails = async() =>{
                 setLoading(true)
                 try {
-                    const data = await getTransformation()
+                    const data = await getTransformationDetails(id)
                     setData(data)
                     setLoading(false)
                 } catch (error) {
-                    setLoading(false)
                     setError(error)
+                    setLoading(false)
                 }
+
             }
-            fetchTransformation();
+            fetchTransformationDetails()
 
         },[]
-    )
 
+    )
     return{data, loading, error}
 }

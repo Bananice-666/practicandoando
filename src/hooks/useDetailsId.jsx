@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
-import { setDetailsId } from "../service/detailsId"
+import { getDetailsId } from "../service/apiService"
 
-export const useDetailsId = () => {
+export const useDetailsId = (id) => {
 
-    const params = useParams()
+
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
@@ -13,7 +12,7 @@ export const useDetailsId = () => {
         const fechtCharacterId = async () => {
             setLoading(true)
             try {
-                const res = await setDetailsId(params.id)
+                const res = await getDetailsId(id)
                 setData(res)
                 setLoading(false)
             } catch (error) {

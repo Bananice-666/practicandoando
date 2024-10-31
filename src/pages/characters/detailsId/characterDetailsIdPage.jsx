@@ -1,10 +1,12 @@
 
+import { useParams } from "react-router-dom"
 import { CardDetailId } from "../../../components/custom/cardCharacters/cardDetailsId"
 import { useDetailsId } from "../../../hooks/useDetailsId"
 
 export const DetailsId = () => {
 
-    const {error,loading,data}=useDetailsId()
+    const {id} =useParams()
+    const {error,loading,data}=useDetailsId(id)
 
     if (loading) return <p>Cargando...</p>
 

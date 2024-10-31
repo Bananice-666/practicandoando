@@ -2,7 +2,7 @@ import "./cardDetailsId.css"
 
 export const CardDetailId = ({name, image, description, race, id, ki, planet, planetImage}) =>{
     return(
-        <div className="all">
+        <div className="all" key={id}>
             <p className="name">{name}</p>
 
             <div className="container-details-all">

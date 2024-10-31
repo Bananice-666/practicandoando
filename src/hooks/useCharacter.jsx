@@ -1,6 +1,6 @@
 import { useEffect } from "react"
-import { getCharacters } from "../service/character"
 import { useState } from "react"
+import { getCharacters } from "../service/apiService"
 
 export const useCharacter = () => {
 
