@@ -17,6 +17,7 @@ export const DetailsId = () => {
         <>
             {data &&
                 <CardDetailId
+                    key={data.id}
                     name={data.name}
                     image={data.image}
                     description={data.description}
@@ -27,6 +28,7 @@ export const DetailsId = () => {
                     planetImage={data.originPlanet.image}
                 />
             }
+
         </>
     )
 }

@@ -15,6 +15,7 @@ export const PlanetsPage = ()=>{
             {dato &&
                 dato.map((item) => (
                     <Planet
+                        key={item.id}
                         id={item.id}
                         name={item.name}
                         description={item.description}

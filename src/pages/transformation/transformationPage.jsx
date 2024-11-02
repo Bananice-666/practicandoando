@@ -1,9 +1,9 @@
 import { CardTransformation } from "../../components/custom/cardTransformation/CardTransformation"
-import { useTransformation } from "../../hooks/useTransformation"
+import { useCharacter } from "../../hooks/useCharacter"
 
 export const TransformationPage =()=>{
 
-    const{error, loading, data}=useTransformation()
+    const{error, loading, data}= useCharacter()
 
     if(loading) return( <p>cargandoando</p>)
     if(error) return (<p>error {error}</p>)
