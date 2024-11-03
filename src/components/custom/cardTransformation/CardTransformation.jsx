@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import "./CardTransformation.css"
 
 export const CardTransformation = ({ id, name, ki, image }) => {
     return (
