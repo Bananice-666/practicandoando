@@ -8,7 +8,6 @@ export const Navbar = () => {
             <div className="grid xl:grid-cols-2 md:grid-cols-1 h-full">
                 <div className="">
                     <Link className="flex font-oswald items-center xl:h-20 md:h-16 h-20 xl:w-1/3 " to={"/"}>
-                        <div className="bg-black xl:w-24 xl:h-full md:w-1/4 md:h-full w-1/5 h-full" ></div>
                         <GiDragonBalls className="h-full w-auto -ml-2" />
                         <span className="text-4xl">DRAGON BALL</span>
                     </Link>
